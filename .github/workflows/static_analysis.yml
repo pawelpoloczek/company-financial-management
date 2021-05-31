@@ -1,0 +1,17 @@
+name: Static analysis
+on: push
+jobs:
+  phpinsights:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Prepare environment
+        run: |
+          cp .env.example .env
+      - name: Install composer dependencies
+        run: |
+          php7.4 bin/composer install
+      - name: Run PHPInsights
+        run: |
+          vendor/bin/phpinsights
