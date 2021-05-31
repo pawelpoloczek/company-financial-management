@@ -7,7 +7,9 @@ use ObjectCalisthenics\Sniffs\Files\ClassTraitAndInterfaceLengthSniff;
 return [
     'preset' => 'laravel',
     'ide' => 'phpstorm',
-    'exclude' => [],
+    'exclude' => [
+        'bin/',
+    ],
     'add' => [],
     'remove' => [],
     'config' => [
