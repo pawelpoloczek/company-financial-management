@@ -8,5 +8,6 @@ start:
 	docker-compose up -d --remove-orphans
 laravel:
 	docker exec cfm_php php artisan $(cmd)
-
+static-analysis:
+	docker exec cfm_php vendor/bin/phpinsights analyse
 

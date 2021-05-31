@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel",
+    "name": "pawelpoloczek/company-financial-management",
     "type": "project",
     "description": "Company financial management app",
     "keywords": ["company", "company finances", "finance management", "laravel"],

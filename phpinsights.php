@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use ObjectCalisthenics\Sniffs\Files\ClassTraitAndInterfaceLengthSniff;
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 
 return [
     'preset' => 'laravel',
@@ -15,6 +16,11 @@ return [
     'config' => [
         ClassTraitAndInterfaceLengthSniff::class => [
             'maxLength' => 300,
+        ],
+        LineLengthSniff::class => [
+            'lineLimit' => 100,
+            'absoluteLineLimit' => 120,
+            'ignoreComments' => false,
         ],
     ],
     'requirements' => [
