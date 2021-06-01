@@ -25,8 +25,8 @@ return [
     ],
     'requirements' => [
         'min-quality' => 85,
-        'min-complexity' => 85,
-        'min-architecture' => 90,
+        'min-complexity' => 80,
+        'min-architecture' => 80,
         'min-style' => 95,
         'disable-security-check' => false,
     ],
