@@ -14,6 +14,10 @@ final class AuthenticateUser
     public function __invoke(Request $request): ?User
     {
         $user = User::where('email', $request->email)->first();
+        if ($user === null) {
+            return null;
+        }
+
         $isActive = $user->status === UserStatus::ACTIVE;
         $passIsCorrect = Hash::check($request->password, $user->password);
 
