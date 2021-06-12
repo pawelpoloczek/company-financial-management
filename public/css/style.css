@@ -1,0 +1,5 @@
+.nav-wrapper #nav-mobile .nav-item i {
+    line-height: 60px !important;
+    display: inline-block !important;
+    vertical-align: middle;
+}

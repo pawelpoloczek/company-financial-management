@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>@yield('title')</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/lib/materialize/css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
     </head>
@@ -8,10 +9,22 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="/">Dashboard</a></li>
-                    <li><a href="/user/profile">Profile</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                <ul id="nav-mobile" class="right">
+                    <li>
+                        <a class="nav-item" href="{{route('dashboard')}}">
+                            <i class="material-icons">dashboard</i>Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="/user/profile">
+                            <i class="material-icons">person</i>Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="{{route('logout')}}">
+                            <i class="material-icons">exit_to_app</i>Logout
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
