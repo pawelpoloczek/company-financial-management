@@ -1,3 +1,26 @@
+main {
+    padding: 30px 30px 30px 330px;
+}
+
+footer {
+    padding-left: 300px;
+}
+
+header .nav-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sidenav {
+    margin-top: 64px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
 .nav-wrapper #nav-mobile .nav-item i {
     line-height: 60px !important;
     display: inline-block !important;
