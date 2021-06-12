@@ -8,7 +8,7 @@ use App\Models\Expense;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class ExpenseController extends Controller
+final class ExpenseController extends Controller
 {
     public function index(): Response
     {

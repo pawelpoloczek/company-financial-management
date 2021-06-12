@@ -8,7 +8,7 @@ use App\Models\Income;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class IncomeController extends Controller
+final class IncomeController extends Controller
 {
     public function index(): Response
     {

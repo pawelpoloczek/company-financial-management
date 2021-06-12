@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ExpenseController;
-use App\Http\Controllers\IncomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth:sanctum', 'verified'])

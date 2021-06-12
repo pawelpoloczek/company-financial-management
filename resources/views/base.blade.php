@@ -31,8 +31,8 @@
             </nav>
         </header>
         <ul class="sidenav sidenav-fixed">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
+            <li><a href="{{route('expenses.index')}}">Expenses</a></li>
+            <li><a href="{{route('incomes.index')}}">Incomes</a></li>
         </ul>
 
         <main>
