@@ -7,17 +7,18 @@ namespace App\Http\Controllers;
 use App\Models\Income;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\View\View;
 
 final class IncomeController extends Controller
 {
-    public function index(): Response
+    public function index(): View
     {
-        //
+        return view('incomes.index');
     }
 
-    public function create(): Response
+    public function create(): View
     {
-        //
+        return view('incomes.create');
     }
 
     public function store(Request $request): Response
@@ -25,14 +26,9 @@ final class IncomeController extends Controller
         //
     }
 
-    public function show(Income $income): Response
+    public function edit(Income $income): View
     {
-        //
-    }
-
-    public function edit(Income $income): Response
-    {
-        //
+        return view('incomes.edit');
     }
 
     public function update(Request $request, Income $income): Response

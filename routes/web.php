@@ -12,7 +12,5 @@ Route::middleware(['auth:sanctum', 'verified'])
 Route::get('logout', [DashboardController::class, 'logout'])
     ->name('logout');
 
-Route::resources([
-    'expenses' => ExpenseController::class,
-    'incomes' => IncomeController::class,
-]);
+Route::resource('expenses', ExpenseController::class)->except(['show']);
+Route::resource('incomes', IncomeController::class)->except(['show']);

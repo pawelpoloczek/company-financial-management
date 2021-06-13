@@ -16,9 +16,9 @@ final class ExpenseController extends Controller
         return view('expenses.index');
     }
 
-    public function create(): Response
+    public function create(): View
     {
-        //
+        return view('expenses.create');
     }
 
     public function store(Request $request): Response
@@ -26,14 +26,9 @@ final class ExpenseController extends Controller
         //
     }
 
-    public function show(Expense $expense): Response
+    public function edit(Expense $expense): View
     {
-        //
-    }
-
-    public function edit(Expense $expense): Response
-    {
-        //
+        return view('expenses.edit');
     }
 
     public function update(Request $request, Expense $expense): Response
