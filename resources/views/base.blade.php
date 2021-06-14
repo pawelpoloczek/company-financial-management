@@ -9,7 +9,9 @@
         <header>
             <nav>
                 <div class="nav-wrapper light-blue darken-1">
-                    <a href="#" class="brand-logo">Logo</a>
+                    <a href="#" class="brand-logo">
+                        <img src="/img/cfm-logo-white.png">
+                    </a>
                     <ul id="nav-mobile" class="right">
                         <li>
                             <a class="nav-item" href="{{route('dashboard')}}">
@@ -36,6 +38,22 @@
         </ul>
 
         <main>
+            @if ($message = Session::get('success'))
+                <div class="row">
+                    <div class="col s12">
+                        <p class="green accent-3 padding">{{ $message }}</p>
+                    </div>
+                </div>
+            @endif
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="row">
                 @yield('content')
             </div>

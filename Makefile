@@ -17,3 +17,5 @@ clear-cache:
 	docker exec cfm_php php artisan optimize:clear
 composer:
 	docker exec cfm_php composer install
+migrate:
+	docker exec cfm_php php artisan migrate

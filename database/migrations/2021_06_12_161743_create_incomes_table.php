@@ -13,6 +13,14 @@ class CreateIncomesTable extends Migration
         Schema::create('incomes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->dateTime('date');
+            $table->string('name');
+            $table->decimal('net',10,4);
+            $table->decimal('gross', 10, 4);
+            $table->decimal('tax', 10, 4);
+            $table->longText('description')->nullable();
+            $table->integer('tax_rate_id');
+            $table->integer('income_type_id');
         });
     }
 
