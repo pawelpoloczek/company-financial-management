@@ -7,7 +7,6 @@ namespace App\Http\Controllers;
 use App\Models\Expense;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\View\View;
 
 final class ExpenseController extends Controller
@@ -43,12 +42,24 @@ final class ExpenseController extends Controller
 
     public function edit(Expense $expense): View
     {
-        return view('expenses.edit');
+        return view('expenses.edit', compact('expense'));
     }
 
-    public function update(Request $request, Expense $expense): Response
+    public function update(Request $request, Expense $expense): RedirectResponse
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'date' => 'required',
+            'net' => 'required',
+            'gross' => 'required',
+            'tax' => 'required',
+            'tax_rate_id' => 'required',
+            'expense_type_id' => 'required',
+        ]);
+
+        $expense->update($request->all());
+
+        return redirect()->route('expenses.index')->with('success', 'Expense updated successfully.');
     }
 
     public function destroy(Expense $expense): RedirectResponse
