@@ -3,16 +3,59 @@
 @section('title', 'Incomes index')
 
 @section('content')
-    <nav>
-        <div class="nav-wrapper light-blue darken-1">
-            <div class="col s12">
-                <a href="{{route('dashboard')}}" class="breadcrumb">Dashboard</a>
-                <a href="{{route('incomes.index')}}" class="breadcrumb">Incomes</a>
-            </div>
-        </div>
-    </nav>
-
     <div class="col s12">
-        <p>Index</p>
+        <nav>
+            <div class="nav-wrapper light-blue darken-1">
+                <div class="col s12">
+                    <a href="{{route('dashboard')}}" class="breadcrumb">Dashboard</a>
+                    <a href="{{route('incomes.index')}}" class="breadcrumb">Incomes</a>
+                </div>
+            </div>
+        </nav>
     </div>
+
+    <div class="col s12 mt-2    ">
+        <a class="light-blue darken-1 btn " href="{{route('incomes.create')}}">
+            <i class="material-icons left">add</i>Add income
+        </a>
+    </div>
+
+    <div class="col s12 mt-2">
+        <table class="table striped">
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Net</th>
+                <th>Gross</th>
+                <th>Tax rate</th>
+                <th>Actions</th>
+            </tr>
+            @foreach ($incomes as $income)
+                <tr>
+                    <td>{{ $income->name }}</td>
+                    <td>{{ $income->date }}</td>
+                    <td>{{ $income->net }}</td>
+                    <td>{{ $income->gross }}</td>
+                    <td>{{ $income->tax_rate_id }}</td>
+                    <td>
+                        <a class="light-blue darken-1 btn" title="Edit" href="{{ route('incomes.edit', $income->id) }}">
+                            <i class="material-icons">edit</i>
+                        </a>
+                        <form class="delete-form" action="{{ route('incomes.destroy', $income->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="red darken-1 btn" title="Delete">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+
+        <div class="center-align mt-2">
+        {{ $incomes->links('pagination.default') }}
+        </div>
+    </div>
+
 @endsection
