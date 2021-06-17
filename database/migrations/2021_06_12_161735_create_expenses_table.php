@@ -13,7 +13,7 @@ class CreateExpensesTable extends Migration
         Schema::create('expenses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->dateTime('date');
+            $table->date('date');
             $table->string('name');
             $table->decimal('net',10,4);
             $table->decimal('gross', 10, 4);

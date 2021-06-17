@@ -13,7 +13,7 @@ class CreateIncomesTable extends Migration
         Schema::create('incomes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->dateTime('date');
+            $table->date('date');
             $table->string('name');
             $table->decimal('net',10,4);
             $table->decimal('gross', 10, 4);
