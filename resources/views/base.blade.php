@@ -35,6 +35,7 @@
         <ul class="sidenav sidenav-fixed">
             <li><a href="{{route('expenses.index')}}">Expenses</a></li>
             <li><a href="{{route('incomes.index')}}">Incomes</a></li>
+            <li><a href="{{route('expenseTypes.index')}}">Expense types</a></li>
         </ul>
 
         <main>

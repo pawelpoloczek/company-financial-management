@@ -15,3 +15,4 @@ Route::get('logout', [DashboardController::class, 'logout'])->name('logout');
 
 Route::resource('expenses', ExpenseController::class)->except(['show']);
 Route::resource('incomes', IncomeController::class)->except(['show']);
+Route::resource('expenseTypes', ExpenseTypeController::class)->except(['show']);
