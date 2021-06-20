@@ -19,3 +19,5 @@ composer:
 	docker exec cfm_php composer install
 migrate:
 	docker exec cfm_php php artisan migrate
+seed:
+	docker exec cfm_php php artisan db:seed

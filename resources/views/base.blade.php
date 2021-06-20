@@ -37,6 +37,7 @@
             <li><a href="{{route('incomes.index')}}">Incomes</a></li>
             <li><a href="{{route('expenseTypes.index')}}">Expense types</a></li>
             <li><a href="{{route('incomeTypes.index')}}">Income types</a></li>
+            <li><a href="{{route('currencies.index')}}">Currencies</a></li>
         </ul>
 
         <main>

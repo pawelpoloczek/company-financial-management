@@ -9,7 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class IncomeTypeController extends Controller
+final class IncomeTypeController extends Controller
 {
     public function index(): View
     {
