@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserStatus extends Migration
+final class AddUserStatus extends Migration
 {
     public function up(): void
     {

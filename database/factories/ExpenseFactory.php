@@ -7,7 +7,7 @@ namespace Database\Factories;
 use App\Models\Expense;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ExpenseFactory extends Factory
+final class ExpenseFactory extends Factory
 {
     /**
      * @var string
