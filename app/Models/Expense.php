@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 final class Expense extends Model
 {
@@ -21,4 +22,9 @@ final class Expense extends Model
         'expense_type_id',
         'description',
     ];
+
+    public function expenseType(): BelongsTo
+    {
+        return $this->belongsTo(ExpenseType::class, 'expense_type_id');
+    }
 }

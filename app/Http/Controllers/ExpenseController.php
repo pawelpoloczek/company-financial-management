@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Expense;
+use App\Models\ExpenseType;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -20,7 +21,9 @@ final class ExpenseController extends Controller
 
     public function create(): View
     {
-        return view('expenses.create');
+        $expenseTypes = ExpenseType::all();
+
+        return view('expenses.create', compact('expenseTypes'));
     }
 
     public function store(Request $request): RedirectResponse
@@ -44,7 +47,9 @@ final class ExpenseController extends Controller
 
     public function edit(Expense $expense): View
     {
-        return view('expenses.edit', compact('expense'));
+        $expenseTypes = ExpenseType::all();
+
+        return view('expenses.edit', compact('expense', 'expenseTypes'));
     }
 
     public function update(Request $request, Expense $expense): RedirectResponse

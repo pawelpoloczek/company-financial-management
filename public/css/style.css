@@ -56,6 +56,10 @@ input:focus,
     color: #039be5 !important;
 }
 
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #039be5 !important;
+}
+
 button:focus {
     background-color: rgb(118, 186, 241) !important;
 }

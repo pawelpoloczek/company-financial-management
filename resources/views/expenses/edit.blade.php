@@ -52,8 +52,15 @@
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input value="{{$expense->expense_type_id}}" placeholder="Expense type" id="expense_type_id" name="expense_type_id" type="number" class="validate" />
-                    <label for="expense_type_id">Expense type</label>
+                    <select name="expense_type_id" id="expense_type_id">
+                        @foreach ($expenseTypes as $expenseType)
+                            <option value="{{$expenseType->id}}"
+                            @if ($expenseType->id === $expense->expense_type_id)
+                                selected="selected"
+                            @endif>{{$expenseType->name}}</option>
+                        @endforeach
+                    </select>
+                    <label for="expense_type_id">Select expense type:</label>
                 </div>
                 <div class="input-field col s6">
                     <textarea id="description" name="description" class="materialize-textarea">{{$expense->description}}</textarea>
