@@ -4,6 +4,8 @@ build:
 	docker-compose up -d --remove-orphans
 	docker exec cfm_php composer install
 	docker exec cfm_php php artisan key:generate
+	docker exec cfm_php php artisan db:drop
+	docker exec cfm_php php artisan db:create
 	docker exec cfm_php php artisan migrate
 	docker exec cfm_php php artisan db:seed
 	docker exec cfm_php php artisan optimize:clear

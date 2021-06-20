@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Models\Currency;
 use App\Models\Income;
+use App\Models\IncomeType;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -20,7 +22,13 @@ final class IncomeController extends Controller
 
     public function create(): View
     {
-        return view('incomes.create');
+        $incomeTypes = IncomeType::all();
+        $currencies = Currency::all();
+
+        return view(
+            'incomes.create',
+            compact('incomeTypes', 'currencies')
+        );
     }
 
     public function store(Request $request): RedirectResponse
@@ -45,7 +53,13 @@ final class IncomeController extends Controller
 
     public function edit(Income $income): View
     {
-        return view('incomes.edit', compact('income'));
+        $incomeTypes = IncomeType::all();
+        $currencies = Currency::all();
+
+        return view(
+            'incomes.edit',
+            compact('income', 'incomeTypes', 'currencies')
+        );
     }
 
     public function update(Request $request, Income $income): RedirectResponse
