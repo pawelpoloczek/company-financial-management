@@ -9,7 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class ExpenseTypeController extends Controller
+final class ExpenseTypeController extends Controller
 {
     public function index(): View
     {
@@ -31,7 +31,9 @@ class ExpenseTypeController extends Controller
 
         ExpenseType::create($request->all());
 
-        return redirect()->route('expenseTypes.index')->with('success', 'Expense type created successfully.');
+        return redirect()
+            ->route('expenseTypes.index')
+            ->with('success', 'Expense type created successfully.');
     }
 
     public function edit(ExpenseType $expenseType): View
@@ -47,13 +49,17 @@ class ExpenseTypeController extends Controller
 
         $expenseType->update($request->all());
 
-        return redirect()->route('expenseTypes.index')->with('success', 'Expense type updated successfully.');
+        return redirect()
+            ->route('expenseTypes.index')
+            ->with('success', 'Expense type updated successfully.');
     }
 
     public function destroy(ExpenseType $expenseType): RedirectResponse
     {
         $expenseType->delete();
 
-        return redirect()->route('expenseTypes.index')->with('success', 'Expense type deleted successfully.');
+        return redirect()
+            ->route('expenseTypes.index')
+            ->with('success', 'Expense type deleted successfully.');
     }
 }

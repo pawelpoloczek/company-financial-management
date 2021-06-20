@@ -37,7 +37,9 @@ final class IncomeController extends Controller
 
         Income::create($request->all());
 
-        return redirect()->route('incomes.index')->with('success', 'Income created successfully.');
+        return redirect()
+            ->route('incomes.index')
+            ->with('success', 'Income created successfully.');
     }
 
     public function edit(Income $income): View
@@ -59,13 +61,17 @@ final class IncomeController extends Controller
 
         $income->update($request->all());
 
-        return redirect()->route('incomes.index')->with('success', 'Income updated successfully.');
+        return redirect()
+            ->route('incomes.index')
+            ->with('success', 'Income updated successfully.');
     }
 
     public function destroy(Income $income): RedirectResponse
     {
         $income->delete();
 
-        return redirect()->route('incomes.index')->with('success', 'Income deleted successfully.');
+        return redirect()
+            ->route('incomes.index')
+            ->with('success', 'Income deleted successfully.');
     }
 }

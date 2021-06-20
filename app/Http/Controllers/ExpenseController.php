@@ -37,7 +37,9 @@ final class ExpenseController extends Controller
 
         Expense::create($request->all());
 
-        return redirect()->route('expenses.index')->with('success', 'Expense created successfully.');
+        return redirect()
+            ->route('expenses.index')
+            ->with('success', 'Expense created successfully.');
     }
 
     public function edit(Expense $expense): View
@@ -59,13 +61,17 @@ final class ExpenseController extends Controller
 
         $expense->update($request->all());
 
-        return redirect()->route('expenses.index')->with('success', 'Expense updated successfully.');
+        return redirect()
+            ->route('expenses.index')
+            ->with('success', 'Expense updated successfully.');
     }
 
     public function destroy(Expense $expense): RedirectResponse
     {
         $expense->delete();
 
-        return redirect()->route('expenses.index')->with('success', 'Expense deleted successfully.');
+        return redirect()
+            ->route('expenses.index')
+            ->with('success', 'Expense deleted successfully.');
     }
 }
