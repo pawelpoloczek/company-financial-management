@@ -24,6 +24,7 @@
         <table>
             <tr>
                 <th>Name</th>
+                <th>Type</th>
                 <th>Date</th>
                 <th>Net</th>
                 <th>Gross</th>
@@ -33,9 +34,10 @@
             @foreach ($expenses as $expense)
                 <tr>
                     <td>{{ $expense->name }}</td>
+                    <td>{{ $expense->expenseType->name }}</td>
                     <td>{{ $expense->date }}</td>
-                    <td>{{ $expense->net }}</td>
-                    <td>{{ $expense->gross }}</td>
+                    <td>{{ number_format($expense->net, 2, '.', ' ') }} {{$expense->currency->symbol}}</td>
+                    <td>{{ number_format($expense->gross, 2, '.', ' ') }} {{$expense->currency->symbol}}</td>
                     <td>{{ $expense->tax_rate_id }}</td>
                     <td>
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('expenses.edit', $expense->id) }}">

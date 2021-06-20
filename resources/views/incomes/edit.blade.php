@@ -52,8 +52,15 @@
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input value="{{$income->income_type_id}}" placeholder="Income type" id="income_type_id" name="income_type_id" type="number" class="validate" />
-                    <label for="income_type_id">Income type</label>
+                    <select name="income_type_id" id="income_type_id">
+                        @foreach ($incomeTypes as $incomeType)
+                            <option value="{{$incomeType->id}}"
+                                    @if ($incomeType->id === $income->income_type_id)
+                                    selected="selected"
+                                    @endif>{{$incomeType->name}}</option>
+                        @endforeach
+                    </select>
+                    <label for="income_type_id">Select income type:</label>
                 </div>
                 <div class="input-field col s6">
                     <select name="currency_id" id="currency_id">

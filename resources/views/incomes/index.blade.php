@@ -14,7 +14,7 @@
         </nav>
     </div>
 
-    <div class="col s12 mt-2    ">
+    <div class="col s12 mt-2">
         <a class="light-blue darken-1 btn " href="{{route('incomes.create')}}">
             <i class="material-icons left">add</i>Add income
         </a>
@@ -24,6 +24,7 @@
         <table>
             <tr>
                 <th>Name</th>
+                <th>Type</th>
                 <th>Date</th>
                 <th>Net</th>
                 <th>Gross</th>
@@ -33,9 +34,10 @@
             @foreach ($incomes as $income)
                 <tr>
                     <td>{{ $income->name }}</td>
+                    <td>{{ $income->incomeType->name }}</td>
                     <td>{{ $income->date }}</td>
-                    <td>{{ $income->net }}</td>
-                    <td>{{ $income->gross }}</td>
+                    <td>{{ number_format($income->net, 2, '.', ' ') }} {{$income->currency->symbol}}</td>
+                    <td>{{ number_format($income->gross, 2, '.', ' ') }} {{$income->currency->symbol}}</td>
                     <td>{{ $income->tax_rate_id }}</td>
                     <td>
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('incomes.edit', $income->id) }}">
