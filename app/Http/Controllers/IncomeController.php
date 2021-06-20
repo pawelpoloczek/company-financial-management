@@ -33,6 +33,7 @@ final class IncomeController extends Controller
             'tax' => 'required',
             'tax_rate_id' => 'required',
             'income_type_id' => 'required',
+            'currency_id' => 'required',
         ]);
 
         Income::create($request->all());
@@ -57,6 +58,7 @@ final class IncomeController extends Controller
             'tax' => 'required',
             'tax_rate_id' => 'required',
             'income_type_id' => 'required',
+            'currency_id' => 'required',
         ]);
 
         $income->update($request->all());

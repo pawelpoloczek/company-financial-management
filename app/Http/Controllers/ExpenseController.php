@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Models\Currency;
 use App\Models\Expense;
 use App\Models\ExpenseType;
 use Illuminate\Http\RedirectResponse;
@@ -22,8 +23,12 @@ final class ExpenseController extends Controller
     public function create(): View
     {
         $expenseTypes = ExpenseType::all();
+        $currencies = Currency::all();
 
-        return view('expenses.create', compact('expenseTypes'));
+        return view(
+            'expenses.create',
+            compact('expenseTypes', 'currencies')
+        );
     }
 
     public function store(Request $request): RedirectResponse
@@ -36,6 +41,7 @@ final class ExpenseController extends Controller
             'tax' => 'required',
             'tax_rate_id' => 'required',
             'expense_type_id' => 'required',
+            'currency_id' => 'required',
         ]);
 
         Expense::create($request->all());
@@ -48,8 +54,12 @@ final class ExpenseController extends Controller
     public function edit(Expense $expense): View
     {
         $expenseTypes = ExpenseType::all();
+        $currencies = Currency::all();
 
-        return view('expenses.edit', compact('expense', 'expenseTypes'));
+        return view(
+            'expenses.edit',
+            compact('expense', 'expenseTypes', 'currencies')
+        );
     }
 
     public function update(Request $request, Expense $expense): RedirectResponse
@@ -62,6 +72,7 @@ final class ExpenseController extends Controller
             'tax' => 'required',
             'tax_rate_id' => 'required',
             'expense_type_id' => 'required',
+            'currency_id' => 'required',
         ]);
 
         $expense->update($request->all());

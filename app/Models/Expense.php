@@ -20,11 +20,17 @@ final class Expense extends Model
         'tax',
         'tax_rate_id',
         'expense_type_id',
+        'currency_id',
         'description',
     ];
 
     public function expenseType(): BelongsTo
     {
         return $this->belongsTo(ExpenseType::class, 'expense_type_id');
+    }
+
+    public function currency(): BelongsTo
+    {
+        return $this->belongsTo(Currency::class, 'currency_id');
     }
 }

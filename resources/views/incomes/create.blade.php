@@ -54,6 +54,16 @@
                     <label for="Income_type_id">Income type</label>
                 </div>
                 <div class="input-field col s6">
+                    <select name="currency_id" id="currency_id">
+                        @foreach ($currencies as $currency)
+                            <option value="{{$currency->id}}">{{$currency->name}} ({{$currency->code}})</option>
+                        @endforeach
+                    </select>
+                    <label for="currency_id">Select currency:</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
                     <textarea id="description" name="description" class="materialize-textarea"></textarea>
                     <label for="description">Description</label>
                 </div>

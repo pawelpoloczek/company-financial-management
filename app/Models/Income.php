@@ -20,11 +20,17 @@ final class Income extends Model
         'tax',
         'tax_rate_id',
         'income_type_id',
+        'currency_id',
         'description',
     ];
 
     public function incomeType(): BelongsTo
     {
         return $this->belongsTo(IncomeType::class, 'income_type_id');
+    }
+
+    public function currency(): BelongsTo
+    {
+        return $this->belongsTo(Currency::class, 'currency_id');
     }
 }
