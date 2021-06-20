@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Incomes index')
+@section('title', 'Income types')
 
 @section('content')
     <div class="col s12">
@@ -8,15 +8,15 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">Dashboard</a>
-                    <a href="{{route('incomes.index')}}" class="breadcrumb">Incomes</a>
+                    <a href="{{route('incomeTypes.index')}}" class="breadcrumb">Income types</a>
                 </div>
             </div>
         </nav>
     </div>
 
-    <div class="col s12 mt-2    ">
-        <a class="light-blue darken-1 btn " href="{{route('incomes.create')}}">
-            <i class="material-icons left">add</i>Add income
+    <div class="col s12 mt-2">
+        <a class="light-blue darken-1 btn " href="{{route('incomeTypes.create')}}">
+            <i class="material-icons left">add</i>Add income type
         </a>
     </div>
 
@@ -24,24 +24,16 @@
         <table>
             <tr>
                 <th>Name</th>
-                <th>Date</th>
-                <th>Net</th>
-                <th>Gross</th>
-                <th>Tax rate</th>
                 <th>Actions</th>
             </tr>
-            @foreach ($incomes as $income)
+            @foreach ($incomeTypes as $incomeType)
                 <tr>
-                    <td>{{ $income->name }}</td>
-                    <td>{{ $income->date }}</td>
-                    <td>{{ $income->net }}</td>
-                    <td>{{ $income->gross }}</td>
-                    <td>{{ $income->tax_rate_id }}</td>
+                    <td>{{ $incomeType->name }}</td>
                     <td>
-                        <a class="light-blue darken-1 btn" title="Edit" href="{{ route('incomes.edit', $income->id) }}">
+                        <a class="light-blue darken-1 btn" title="Edit" href="{{ route('incomeTypes.edit', $incomeType->id) }}">
                             <i class="material-icons">edit</i>
                         </a>
-                        <form class="delete-form" action="{{ route('incomes.destroy', $income->id) }}" method="POST">
+                        <form class="delete-form" action="{{ route('incomeTypes.destroy', $incomeType->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="red darken-1 btn" title="Delete">
@@ -54,7 +46,7 @@
         </table>
 
         <div class="center-align mt-2">
-        {{ $incomes->links('pagination.default') }}
+        {{ $incomeTypes->links('pagination.default') }}
         </div>
     </div>
 

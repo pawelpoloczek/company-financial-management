@@ -21,7 +21,7 @@
     </div>
 
     <div class="col s12 mt-2">
-        <table class="table striped">
+        <table>
             <tr>
                 <th>Name</th>
                 <th>Actions</th>

@@ -5,83 +5,61 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\IncomeType;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class IncomeTypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(): View
     {
-        //
+        $incomeTypes = IncomeType::latest()->paginate(5);
+
+        return view('incomeTypes.index', compact('incomeTypes'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(): View
     {
-        //
+        return view('incomeTypes.create');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    
+    public function store(Request $request): RedirectResponse
     {
-        //
+        $request->validate([
+            'name' => 'required',
+        ]);
+
+        IncomeType::create($request->all());
+
+        return redirect()
+            ->route('incomeTypes.index')
+            ->with('success', 'Income type created successfully.');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\IncomeType  $incomeType
-     * @return \Illuminate\Http\Response
-     */
-    public function show(IncomeType $incomeType)
+    
+    public function edit(IncomeType $incomeType): View
     {
-        //
+        return view('incomeTypes.edit', compact('incomeType'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\IncomeType  $incomeType
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(IncomeType $incomeType)
+    
+    public function update(Request $request, IncomeType $incomeType): RedirectResponse
     {
-        //
+        $request->validate([
+            'name' => 'required',
+        ]);
+
+        $incomeType->update($request->all());
+
+        return redirect()
+            ->route('incomeTypes.index')
+            ->with('success', 'Income type updated successfully.');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\IncomeType  $incomeType
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, IncomeType $incomeType)
+    
+    public function destroy(IncomeType $incomeType): RedirectResponse
     {
-        //
-    }
+        $incomeType->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\IncomeType  $incomeType
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(IncomeType $incomeType)
-    {
-        //
+        return redirect()
+            ->route('incomeTypes.index')
+            ->with('success', 'Income type deleted successfully.');
     }
 }
