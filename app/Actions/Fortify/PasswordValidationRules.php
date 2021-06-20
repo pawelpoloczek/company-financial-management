@@ -6,7 +6,7 @@ namespace App\Actions\Fortify;
 
 use Laravel\Fortify\Rules\Password;
 
-trait PasswordValidationRules
+abstract class PasswordValidationRules
 {
     protected function passwordRules(): array
     {

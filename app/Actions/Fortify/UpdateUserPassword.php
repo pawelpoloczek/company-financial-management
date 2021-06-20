@@ -4,15 +4,25 @@ declare(strict_types=1);
 
 namespace App\Actions\Fortify;
 
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\UpdatesUserPasswords;
 
-final class UpdateUserPassword implements UpdatesUserPasswords
+final class UpdateUserPassword extends PasswordValidationRules implements UpdatesUserPasswords
 {
-    use PasswordValidationRules;
-
     public function update($user, array $input): void
+    {
+        $this->validate($user, $input);
+
+        $user->forceFill(
+            [
+                'password' => Hash::make($input['password']),
+            ]
+        )->save();
+    }
+
+    private function validate(?User $user, array $input): void
     {
         Validator::make(
             $input,
@@ -30,11 +40,5 @@ final class UpdateUserPassword implements UpdatesUserPasswords
                 );
             }
         })->validateWithBag('updatePassword');
-
-        $user->forceFill(
-            [
-                'password' => Hash::make($input['password']),
-            ]
-        )->save();
     }
 }

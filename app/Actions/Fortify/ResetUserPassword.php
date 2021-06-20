@@ -8,10 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\ResetsUserPasswords;
 
-final class ResetUserPassword implements ResetsUserPasswords
+final class ResetUserPassword extends PasswordValidationRules implements ResetsUserPasswords
 {
-    use PasswordValidationRules;
-
     public function reset($user, array $input): void
     {
         Validator::make($input, [

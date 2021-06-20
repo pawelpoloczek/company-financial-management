@@ -22,7 +22,7 @@ final class IncomeTypeController extends Controller
     {
         return view('incomeTypes.create');
     }
-    
+
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
@@ -35,12 +35,12 @@ final class IncomeTypeController extends Controller
             ->route('incomeTypes.index')
             ->with('success', 'Income type created successfully.');
     }
-    
+
     public function edit(IncomeType $incomeType): View
     {
         return view('incomeTypes.edit', compact('incomeType'));
     }
-    
+
     public function update(Request $request, IncomeType $incomeType): RedirectResponse
     {
         $request->validate([
@@ -53,7 +53,7 @@ final class IncomeTypeController extends Controller
             ->route('incomeTypes.index')
             ->with('success', 'Income type updated successfully.');
     }
-    
+
     public function destroy(IncomeType $incomeType): RedirectResponse
     {
         $incomeType->delete();

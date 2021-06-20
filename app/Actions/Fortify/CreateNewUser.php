@@ -13,10 +13,8 @@ use Illuminate\Validation\ValidationException;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
 
-final class CreateNewUser implements CreatesNewUsers
+final class CreateNewUser extends PasswordValidationRules implements CreatesNewUsers
 {
-    use PasswordValidationRules;
-
     /**
      * @throws AuthenticationException
      * @throws ValidationException
