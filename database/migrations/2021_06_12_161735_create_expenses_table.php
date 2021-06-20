@@ -21,6 +21,7 @@ final class CreateExpensesTable extends Migration
             $table->longText('description')->nullable();
             $table->integer('tax_rate_id');
             $table->integer('expense_type_id');
+            $table->integer('currency_id');
         });
     }
 

@@ -21,6 +21,7 @@ final class CreateIncomesTable extends Migration
             $table->longText('description')->nullable();
             $table->integer('tax_rate_id');
             $table->integer('income_type_id');
+            $table->integer('currency_id');
         });
     }
 
