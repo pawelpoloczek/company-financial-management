@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\Currency;
 use App\Models\Income;
 use App\Models\IncomeType;
+use App\Models\TaxRate;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -24,10 +25,11 @@ final class IncomeController extends Controller
     {
         $incomeTypes = IncomeType::all();
         $currencies = Currency::all();
+        $taxRates = TaxRate::all();
 
         return view(
             'incomes.create',
-            compact('incomeTypes', 'currencies')
+            compact('incomeTypes', 'currencies', 'taxRates')
         );
     }
 
@@ -55,10 +57,11 @@ final class IncomeController extends Controller
     {
         $incomeTypes = IncomeType::all();
         $currencies = Currency::all();
+        $taxRates = TaxRate::all();
 
         return view(
             'incomes.edit',
-            compact('income', 'incomeTypes', 'currencies')
+            compact('income', 'incomeTypes', 'currencies', 'taxRates')
         );
     }
 

@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\Currency;
 use App\Models\Expense;
 use App\Models\ExpenseType;
+use App\Models\TaxRate;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -24,10 +25,11 @@ final class ExpenseController extends Controller
     {
         $expenseTypes = ExpenseType::all();
         $currencies = Currency::all();
+        $taxRates = TaxRate::all();
 
         return view(
             'expenses.create',
-            compact('expenseTypes', 'currencies')
+            compact('expenseTypes', 'currencies', 'taxRates')
         );
     }
 
@@ -55,10 +57,11 @@ final class ExpenseController extends Controller
     {
         $expenseTypes = ExpenseType::all();
         $currencies = Currency::all();
+        $taxRates = TaxRate::all();
 
         return view(
             'expenses.edit',
-            compact('expense', 'expenseTypes', 'currencies')
+            compact('expense', 'expenseTypes', 'currencies', 'taxRates')
         );
     }
 

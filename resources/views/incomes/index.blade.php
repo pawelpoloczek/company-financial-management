@@ -38,7 +38,7 @@
                     <td>{{ $income->date }}</td>
                     <td>{{ number_format($income->net, 2, '.', ' ') }} {{$income->currency->symbol}}</td>
                     <td>{{ number_format($income->gross, 2, '.', ' ') }} {{$income->currency->symbol}}</td>
-                    <td>{{ $income->tax_rate_id }}</td>
+                    <td>{{ $income->taxRate->name }}</td>
                     <td>
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('incomes.edit', $income->id) }}">
                             <i class="material-icons">edit</i>

@@ -46,8 +46,15 @@
                     <label for="tax">Tax value</label>
                 </div>
                 <div class="input-field col s6">
-                    <input value="{{$expense->tax_rate_id}}" placeholder="Tax rate" id="tax_rate_id" name="tax_rate_id" type="number" class="validate" />
-                    <label for="tax_rate_id">Tax rate</label>
+                    <select name="tax_rate_id" id="tax_rate_id">
+                        @foreach ($taxRates as $taxRate)
+                            <option value="{{$taxRate->id}}"
+                                    @if ($taxRate->id === $expense->tax_rate_id)
+                                    selected="selected"
+                                    @endif>{{$taxRate->name}}</option>
+                        @endforeach
+                    </select>
+                    <label for="tax_rate_id">Select tax rate:</label>
                 </div>
             </div>
             <div class="row">
