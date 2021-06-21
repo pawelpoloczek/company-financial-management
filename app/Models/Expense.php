@@ -33,4 +33,9 @@ final class Expense extends Model
     {
         return $this->belongsTo(Currency::class, 'currency_id');
     }
+
+    public function taxRate(): BelongsTo
+    {
+        return $this->belongsTo(TaxRate::class, 'tax_rate_id');
+    }
 }

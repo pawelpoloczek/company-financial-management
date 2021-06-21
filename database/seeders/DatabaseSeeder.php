@@ -16,6 +16,7 @@ final class DatabaseSeeder extends Seeder
                 ExpenseTypeSeeder::class,
                 IncomeTypeSeeder::class,
                 CurrencySeeder::class,
+                TaxRateSeeder::class,
             ],
         );
     }
