@@ -25,13 +25,13 @@
             <tr>
                 <th>Name</th>
                 <th>Value</th>
-                <th>Actions</th>
+                <th class="right-align pr30">Actions</th>
             </tr>
             @foreach ($taxRates as $taxRate)
                 <tr>
                     <td>{{ $taxRate->name }}</td>
                     <td>{{ $taxRate->value }}</td>
-                    <td>
+                    <td class="right-align">
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('taxRates.edit', $taxRate->id) }}">
                             <i class="material-icons">edit</i>
                         </a>

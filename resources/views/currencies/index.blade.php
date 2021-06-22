@@ -26,14 +26,14 @@
                 <th>Name</th>
                 <th>Code</th>
                 <th>Symbol</th>
-                <th>Actions</th>
+                <th class="right-align pr30">Actions</th>
             </tr>
             @foreach ($currencies as $currency)
                 <tr>
                     <td>{{ $currency->name }}</td>
                     <td>{{ $currency->code }}</td>
                     <td>{{ $currency->symbol }}</td>
-                    <td>
+                    <td class="right-align" >
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('currencies.edit', $currency->id) }}">
                             <i class="material-icons">edit</i>
                         </a>

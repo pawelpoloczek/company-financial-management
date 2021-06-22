@@ -24,12 +24,12 @@
         <table>
             <tr>
                 <th>Name</th>
-                <th>Actions</th>
+                <th class="right-align pr30">Actions</th>
             </tr>
             @foreach ($expenseTypes as $expenseType)
                 <tr>
                     <td>{{ $expenseType->name }}</td>
-                    <td>
+                    <td class="right-align">
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('expenseTypes.edit', $expenseType->id) }}">
                             <i class="material-icons">edit</i>
                         </a>

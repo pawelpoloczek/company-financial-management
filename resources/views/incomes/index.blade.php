@@ -29,7 +29,7 @@
                 <th>Net</th>
                 <th>Gross</th>
                 <th>Tax rate</th>
-                <th>Actions</th>
+                <th class="right-align pr30">Actions</th>
             </tr>
             @foreach ($incomes as $income)
                 <tr>
@@ -39,7 +39,7 @@
                     <td>{{ number_format($income->net, 2, '.', ' ') }} {{$income->currency->symbol}}</td>
                     <td>{{ number_format($income->gross, 2, '.', ' ') }} {{$income->currency->symbol}}</td>
                     <td>{{ $income->taxRate->name }}</td>
-                    <td>
+                    <td class="right-align">
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('incomes.edit', $income->id) }}">
                             <i class="material-icons">edit</i>
                         </a>

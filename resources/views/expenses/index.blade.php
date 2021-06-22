@@ -29,7 +29,7 @@
                 <th>Net</th>
                 <th>Gross</th>
                 <th>Tax rate</th>
-                <th>Actions</th>
+                <th class="right-align pr30">Actions</th>
             </tr>
             @foreach ($expenses as $expense)
                 <tr>
@@ -39,7 +39,7 @@
                     <td>{{ number_format($expense->net, 2, '.', ' ') }} {{$expense->currency->symbol}}</td>
                     <td>{{ number_format($expense->gross, 2, '.', ' ') }} {{$expense->currency->symbol}}</td>
                     <td>{{ $expense->taxRate->name }}</td>
-                    <td>
+                    <td class="right-align">
                         <a class="light-blue darken-1 btn" title="Edit" href="{{ route('expenses.edit', $expense->id) }}">
                             <i class="material-icons">edit</i>
                         </a>
