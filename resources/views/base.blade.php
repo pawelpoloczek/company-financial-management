@@ -19,7 +19,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-item" href="/user/profile">
+                            <a class="nav-item" href="{{route('profile')}}">
                                 <i class="material-icons">person</i>Profile
                             </a>
                         </li>

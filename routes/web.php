@@ -9,8 +9,16 @@ Route::middleware(['auth:sanctum', 'verified'])
     ->get('/', DashboardController::class)
     ->name('dashboard');
 
-Route::get('login', [SecurityController::class, 'login'])->name('login');
-Route::get('logout', [SecurityController::class, 'logout'])->name('logout');
+Route::get('/user/profile', function() {
+    return redirect('/profile');
+});
+
+Route::get('/login', [SecurityController::class, 'login'])->name('login');
+Route::get('/logout', [SecurityController::class, 'logout'])->name('logout');
+Route::get('/profile', [SecurityController::class, 'profile'])->name('profile');
+
+Route::post('/update-password', [SecurityController::class, 'updatePassword'])
+    ->name('update-password');
 
 Route::resource('expenses', ExpenseController::class)->except(['show']);
 Route::resource('incomes', IncomeController::class)->except(['show']);
