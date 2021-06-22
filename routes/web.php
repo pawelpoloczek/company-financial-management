@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SecurityController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth:sanctum', 'verified'])
-    ->get('/', [DashboardController::class, 'dashboard'])
+    ->get('/', DashboardController::class)
     ->name('dashboard');
 
-//Route::get('login', [DashboardController::class, 'login'])->name('login');
-Route::get('logout', [DashboardController::class, 'logout'])->name('logout');
+Route::get('login', [SecurityController::class, 'login'])->name('login');
+Route::get('logout', [SecurityController::class, 'logout'])->name('logout');
 
 Route::resource('expenses', ExpenseController::class)->except(['show']);
 Route::resource('incomes', IncomeController::class)->except(['show']);
