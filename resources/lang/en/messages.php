@@ -11,4 +11,5 @@ return [
     'remember-me' => 'Remember me',
     'forgot-password' => 'Forgot password?',
     'password-reset-link' => 'Email Password Reset Link',
+    'dashboard' => 'Dashboard',
 ];

@@ -15,18 +15,18 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input placeholder="Email" id="email" name="email" type="text" class="validate" />
-                                <label for="email">Email</label>
+                                <label for="email">{{ __('messages.email') }}</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <input placeholder="Password" id="password" name="password" type="password" class="validate" />
-                                <label for="password">Password</label>
+                                <label for="password">{{ __('messages.password') }}</label>
                             </div>
                         </div>
                         <div class="row center-align">
                             <div class="input-field col s12">
-                                <button type="submit" class="btn light-blue darken-1">Sign in</button>
+                                <button type="submit" class="btn light-blue darken-1">{{ __('messages.log-in') }}</button>
                             </div>
                         </div>
                     </form>

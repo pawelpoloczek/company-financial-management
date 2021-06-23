@@ -11,4 +11,5 @@ return [
     'remember-me' => 'Zapamiętaj mnie',
     'forgot-password' => 'Zapomniałeś hasła?',
     'password-reset-link' => 'Wyślij link do zresetowania hasła',
+    'dashboard' => 'Strona główna',
 ];

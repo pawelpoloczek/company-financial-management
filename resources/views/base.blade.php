@@ -15,7 +15,7 @@
                     <ul id="nav-mobile" class="right">
                         <li>
                             <a class="nav-item" href="{{route('dashboard')}}">
-                                <i class="material-icons">dashboard</i>Dashboard
+                                <i class="material-icons">dashboard</i>{{ __('messages.dashboard') }}
                             </a>
                         </li>
                         <li>

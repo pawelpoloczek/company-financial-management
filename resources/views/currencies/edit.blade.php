@@ -7,7 +7,7 @@
         <nav>
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
-                    <a href="{{route('dashboard')}}" class="breadcrumb">Dashboard</a>
+                    <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
                     <a href="{{route('currencies.index')}}" class="breadcrumb">Currencies</a>
                     <a href="#" class="breadcrumb">Edit currency</a>
                 </div>
