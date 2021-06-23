@@ -28,4 +28,6 @@ return [
     'select-expense-type' => 'Wybierz typ wydatku',
     'select-income-type' => 'Wybierz typ przychodu',
     'incomes' => 'Przychody',
+    'edit' => 'Edytuj',
+    'delete' => 'Usuń',
 ];

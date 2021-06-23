@@ -40,13 +40,13 @@
                     <td>{{ number_format($income->gross, 2, '.', ' ') }} {{$income->currency->symbol}}</td>
                     <td>{{ $income->taxRate->name }}</td>
                     <td class="right-align">
-                        <a class="light-blue darken-1 btn" title="Edit" href="{{ route('incomes.edit', $income->id) }}">
+                        <a class="light-blue darken-1 btn" title="{{ __('messages.edit') }}" href="{{ route('incomes.edit', $income->id) }}">
                             <i class="material-icons">edit</i>
                         </a>
                         <form class="delete-form" action="{{ route('incomes.destroy', $income->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="red darken-1 btn" title="Delete">
+                            <button type="submit" class="red darken-1 btn" title="{{ __('messages.delete') }}">
                                 <i class="material-icons">delete</i>
                             </button>
                         </form>

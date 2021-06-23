@@ -32,13 +32,13 @@
                     <td>{{ $taxRate->name }}</td>
                     <td>{{ $taxRate->value }}</td>
                     <td class="right-align">
-                        <a class="light-blue darken-1 btn" title="Edit" href="{{ route('taxRates.edit', $taxRate->id) }}">
+                        <a class="light-blue darken-1 btn" title="{{ __('messages.edit') }}" href="{{ route('taxRates.edit', $taxRate->id) }}">
                             <i class="material-icons">edit</i>
                         </a>
                         <form class="delete-form" action="{{ route('taxRates.destroy', $taxRate->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="red darken-1 btn" title="Delete">
+                            <button type="submit" class="red darken-1 btn" title="{{ __('messages.delete') }}">
                                 <i class="material-icons">delete</i>
                             </button>
                         </form>

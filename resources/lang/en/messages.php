@@ -28,4 +28,6 @@ return [
     'select-expense-type' => 'Select expense type',
     'select-income-type' => 'Select income type',
     'incomes' => 'Incomes',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
 ];
