@@ -23,7 +23,7 @@
     <div class="col s12 mt-2">
         <table>
             <tr>
-                <th>Name</th>
+                <th>{{ __('messages.name') }}</th>
                 <th>Type</th>
                 <th>Date</th>
                 <th>Net</th>

@@ -20,8 +20,8 @@
             @csrf
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder="Name" id="name" name="name" type="text" class="validate" />
-                    <label for="name">Name</label>
+                    <input placeholder="{{ __('messages.name') }}" id="name" name="name" type="text" class="validate" />
+                    <label for="name">{{ __('messages.name') }}</label>
                 </div>
             </div>
             <div class="row">

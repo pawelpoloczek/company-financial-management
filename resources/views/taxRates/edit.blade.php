@@ -21,8 +21,8 @@
             @method('PATCH')
             <div class="row">
                 <div class="input-field col s6">
-                    <input value="{{ $taxRate->name }}" placeholder="Name" id="name" name="name" type="text" class="validate" />
-                    <label for="name">Name</label>
+                    <input value="{{ $taxRate->name }}" placeholder="{{ __('messages.name') }}" id="name" name="name" type="text" class="validate" />
+                    <label for="name">{{ __('messages.name') }}</label>
                 </div>
                 <div class="input-field col s6">
                     <input value="{{ $taxRate->value }}" placeholder="Value" id="value" name="value" type="number" step="0.01" class="validate" />

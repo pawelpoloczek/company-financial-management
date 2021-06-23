@@ -12,4 +12,5 @@ return [
     'forgot-password' => 'Forgot password?',
     'password-reset-link' => 'Email Password Reset Link',
     'dashboard' => 'Dashboard',
+    'name' => 'Nazwa',
 ];

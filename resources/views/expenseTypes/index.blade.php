@@ -23,7 +23,7 @@
     <div class="col s12 mt-2">
         <table>
             <tr>
-                <th>Name</th>
+                <th>{{ __('messages.name') }}</th>
                 <th class="right-align pr30">Actions</th>
             </tr>
             @foreach ($expenseTypes as $expenseType)
