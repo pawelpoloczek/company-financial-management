@@ -17,4 +17,6 @@ return [
     'type' => 'Type',
     'date' => 'Date',
     'net' => 'Net',
+    'gross' => 'Gross',
+    'tax-value' => 'Tax value',
 ];

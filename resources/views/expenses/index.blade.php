@@ -27,7 +27,7 @@
                 <th>{{ __('messages.type') }}</th>
                 <th>{{ __('messages.date') }}</th>
                 <th>{{ __('messages.net') }}</th>
-                <th>Gross</th>
+                <th>{{ __('messages.gross') }}</th>
                 <th>Tax rate</th>
                 <th class="right-align pr30">{{ __('messages.actions') }}</th>
             </tr>

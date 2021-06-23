@@ -17,4 +17,6 @@ return [
     'type' => 'Typ',
     'date' => 'Data',
     'net' => 'Netto',
+    'gross' => 'Brutto',
+    'tax-value' => 'Wartość podatku',
 ];

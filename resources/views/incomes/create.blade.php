@@ -34,14 +34,14 @@
                     <label for="net">{{ __('messages.net') }}</label>
                 </div>
                 <div class="input-field col s6">
-                    <input placeholder="Gross" id="gross" name="gross" type="number" step="0.0001" class="validate" />
-                    <label for="gross">Gross</label>
+                    <input placeholder="{{ __('messages.gross') }}" id="gross" name="gross" type="number" step="0.0001" class="validate" />
+                    <label for="gross">{{ __('messages.gross') }}</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="Tax value" id="tax" name="tax" type="number" step="0.0001" class="validate" />
-                    <label for="tax">Tax value</label>
+                    <input placeholder="{{ __('messages.tax-value') }}" id="tax" name="tax" type="number" step="0.0001" class="validate" />
+                    <label for="tax">{{ __('messages.tax-value') }}</label>
                 </div>
                 <div class="input-field col s6">
                     <select name="tax_rate_id" id="tax_rate_id">
