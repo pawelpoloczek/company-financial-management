@@ -16,4 +16,5 @@ return [
     'actions' => 'Akcje',
     'type' => 'Typ',
     'date' => 'Data',
+    'net' => 'Netto',
 ];

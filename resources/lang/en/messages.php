@@ -16,4 +16,5 @@ return [
     'actions' => 'Actions',
     'type' => 'Type',
     'date' => 'Date',
+    'net' => 'Net',
 ];

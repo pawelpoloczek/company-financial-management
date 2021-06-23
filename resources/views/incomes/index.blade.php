@@ -26,7 +26,7 @@
                 <th>{{ __('messages.name') }}</th>
                 <th>{{ __('messages.name') }}</th>
                 <th>{{ __('messages.date') }}</th>
-                <th>Net</th>
+                <th>{{ __('messages.net') }}</th>
                 <th>Gross</th>
                 <th>Tax rate</th>
                 <th class="right-align pr30">{{ __('messages.actions') }}</th>

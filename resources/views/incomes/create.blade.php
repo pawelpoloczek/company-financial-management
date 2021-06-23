@@ -30,8 +30,8 @@
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="Net" id="net" name="net" type="number" step="0.0001" class="validate" />
-                    <label for="net">Net</label>
+                    <input placeholder="{{ __('messages.net') }}" id="net" name="net" type="number" step="0.0001" class="validate" />
+                    <label for="net">{{ __('messages.net') }}</label>
                 </div>
                 <div class="input-field col s6">
                     <input placeholder="Gross" id="gross" name="gross" type="number" step="0.0001" class="validate" />
