@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Income types')
+@section('title', __('messages.tax-rate'))
 
 @section('content')
     <div class="col s12">

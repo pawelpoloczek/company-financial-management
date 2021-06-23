@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Incomes index')
+@section('title', __('messages.incomes'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('incomes.index')}}" class="breadcrumb">Incomes</a>
+                    <a href="{{route('incomes.index')}}" class="breadcrumb">{{ __('messages.incomes') }}</a>
                 </div>
             </div>
         </nav>
@@ -28,7 +28,7 @@
                 <th>{{ __('messages.date') }}</th>
                 <th>{{ __('messages.net') }}</th>
                 <th>{{ __('messages.gross') }}</th>
-                <th>Tax rate</th>
+                <th>{{ __('messages.tax-rate') }}</th>
                 <th class="right-align pr30">{{ __('messages.actions') }}</th>
             </tr>
             @foreach ($incomes as $income)

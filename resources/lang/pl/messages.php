@@ -23,4 +23,9 @@ return [
     'description' => 'Opis',
     'select-tax-rate' => 'Wybierz stawkę podatku',
     'select-currency' => 'Wybierz walutę',
+    'expenses' => 'Wydatki',
+    'tax-rate' => 'Stawka podatku',
+    'select-expense-type' => 'Wybierz typ wydatku',
+    'select-income-type' => 'Wybierz typ przychodu',
+    'incomes' => 'Przychody',
 ];

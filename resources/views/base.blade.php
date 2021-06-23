@@ -33,8 +33,8 @@
             </nav>
         </header>
         <ul class="sidenav sidenav-fixed">
-            <li><a href="{{route('expenses.index')}}">Expenses</a></li>
-            <li><a href="{{route('incomes.index')}}">Incomes</a></li>
+            <li><a href="{{route('expenses.index')}}">{{ __('messages.expenses') }}</a></li>
+            <li><a href="{{route('incomes.index')}}">{{ __('messages.incomes') }}</a></li>
             <li><a href="{{route('expenseTypes.index')}}">Expense types</a></li>
             <li><a href="{{route('incomeTypes.index')}}">Income types</a></li>
             <li><a href="{{route('currencies.index')}}">Currencies</a></li>

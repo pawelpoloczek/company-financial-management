@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Expenses edit')
+@section('title', __('messages.expenses'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('expenses.index')}}" class="breadcrumb">Expenses</a>
+                    <a href="{{route('expenses.index')}}" class="breadcrumb">{{ __('messages.expenses') }}</a>
                     <a href="#" class="breadcrumb">Edit expense</a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                             @endif>{{$expenseType->name}}</option>
                         @endforeach
                     </select>
-                    <label for="expense_type_id">Select expense type:</label>
+                    <label for="expense_type_id">{{ __('messages.select-expense-type') }}:</label>
                 </div>
                 <div class="input-field col s6">
                     <select name="currency_id" id="currency_id">

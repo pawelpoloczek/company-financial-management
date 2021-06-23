@@ -23,4 +23,9 @@ return [
     'description' => 'Description',
     'select-tax-rate' => 'Select tax rate',
     'select-currency' => 'Select currency',
+    'expenses' => 'Expenses',
+    'tax-rate' => 'Tax rate',
+    'select-expense-type' => 'Select expense type',
+    'select-income-type' => 'Select income type',
+    'incomes' => 'Incomes',
 ];

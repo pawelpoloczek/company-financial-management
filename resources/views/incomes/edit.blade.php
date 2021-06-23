@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Incomes edit')
+@section('title', __('messages.incomes'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('incomes.index')}}" class="breadcrumb">Incomes</a>
+                    <a href="{{route('incomes.index')}}" class="breadcrumb">{{ __('messages.incomes') }}</a>
                     <a href="#" class="breadcrumb">Edit income</a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                                     @endif>{{$incomeType->name}}</option>
                         @endforeach
                     </select>
-                    <label for="income_type_id">Select income type:</label>
+                    <label for="income_type_id">{{ __('messages.select-income-type') }}:</label>
                 </div>
                 <div class="input-field col s6">
                     <select name="currency_id" id="currency_id">
