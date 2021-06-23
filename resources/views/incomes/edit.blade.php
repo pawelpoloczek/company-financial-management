@@ -84,12 +84,12 @@
             <div class="row">
                 <div class="input-field col s6">
                     <textarea id="description" name="description" class="materialize-textarea">{{$income->description}}</textarea>
-                    <label for="description">Description</label>
+                    <label for="description">{{ __('messages.description') }}</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <button type="submit" class="btn light-blue darken-1">Submit</button>
+                    <button type="submit" class="btn light-blue darken-1">{{ __('messages.submit') }}</button>
                 </div>
             </div>
         </form>

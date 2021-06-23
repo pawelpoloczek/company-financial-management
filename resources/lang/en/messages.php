@@ -19,4 +19,6 @@ return [
     'net' => 'Net',
     'gross' => 'Gross',
     'tax-value' => 'Tax value',
+    'submit' => 'Submit',
+    'description' => 'Description',
 ];

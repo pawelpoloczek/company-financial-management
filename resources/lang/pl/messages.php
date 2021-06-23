@@ -19,4 +19,6 @@ return [
     'net' => 'Netto',
     'gross' => 'Brutto',
     'tax-value' => 'Wartość podatku',
+    'submit' => 'Zapisz',
+    'description' => 'Opis',
 ];

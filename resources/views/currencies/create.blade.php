@@ -34,7 +34,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <button type="submit" class="btn light-blue darken-1">Submit</button>
+                    <button type="submit" class="btn light-blue darken-1">{{ __('messages.submit') }}</button>
                 </div>
             </div>
         </form>
