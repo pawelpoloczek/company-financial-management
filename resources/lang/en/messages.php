@@ -13,4 +13,7 @@ return [
     'password-reset-link' => 'Email Password Reset Link',
     'dashboard' => 'Dashboard',
     'name' => 'Nazwa',
+    'actions' => 'Actions',
+    'type' => 'Type',
+    'date' => 'Date',
 ];

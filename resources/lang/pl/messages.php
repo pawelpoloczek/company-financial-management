@@ -13,4 +13,7 @@ return [
     'password-reset-link' => 'Wyślij link do zresetowania hasła',
     'dashboard' => 'Strona główna',
     'name' => 'Nazwa',
+    'actions' => 'Akcje',
+    'type' => 'Typ',
+    'date' => 'Data',
 ];

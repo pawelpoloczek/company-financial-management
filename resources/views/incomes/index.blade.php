@@ -24,12 +24,12 @@
         <table>
             <tr>
                 <th>{{ __('messages.name') }}</th>
-                <th>Type</th>
-                <th>Date</th>
+                <th>{{ __('messages.name') }}</th>
+                <th>{{ __('messages.date') }}</th>
                 <th>Net</th>
                 <th>Gross</th>
                 <th>Tax rate</th>
-                <th class="right-align pr30">Actions</th>
+                <th class="right-align pr30">{{ __('messages.actions') }}</th>
             </tr>
             @foreach ($incomes as $income)
                 <tr>

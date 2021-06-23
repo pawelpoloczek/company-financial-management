@@ -26,8 +26,8 @@
                     <label for="name">{{ __('messages.name') }}</label>
                 </div>
                 <div class="input-field col s6">
-                    <input value="{{$expense->date}}" placeholder="Date" id="date" name="date" type="text" class="datepicker" />
-                    <label for="date">Date</label>
+                    <input value="{{$expense->date}}" placeholder="{{ __('messages.date') }}" id="date" name="date" type="text" class="datepicker" />
+                    <label for="date">{{ __('messages.date') }}</label>
                 </div>
             </div>
             <div class="row">

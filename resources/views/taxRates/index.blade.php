@@ -25,7 +25,7 @@
             <tr>
                 <th>{{ __('messages.name') }}</th>
                 <th>Value</th>
-                <th class="right-align pr30">Actions</th>
+                <th class="right-align pr30">{{ __('messages.actions') }}</th>
             </tr>
             @foreach ($taxRates as $taxRate)
                 <tr>

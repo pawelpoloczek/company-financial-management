@@ -24,7 +24,7 @@
         <table>
             <tr>
                 <th>{{ __('messages.name') }}</th>
-                <th class="right-align pr30">Actions</th>
+                <th class="right-align pr30">{{ __('messages.actions') }}</th>
             </tr>
             @foreach ($incomeTypes as $incomeType)
                 <tr>
