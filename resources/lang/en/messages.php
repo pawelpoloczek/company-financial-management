@@ -21,4 +21,6 @@ return [
     'tax-value' => 'Tax value',
     'submit' => 'Submit',
     'description' => 'Description',
+    'select-tax-rate' => 'Select tax rate',
+    'select-currency' => 'Select currency',
 ];

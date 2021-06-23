@@ -49,7 +49,7 @@
                             <option value="{{$taxRate->id}}">{{$taxRate->name}}</option>
                         @endforeach
                     </select>
-                    <label for="tax_rate_id">Select tax rate:</label>
+                    <label for="tax_rate_id">{{ __('messages.select-tax-rate') }}:</label>
                 </div>
             </div>
             <div class="row">
@@ -67,7 +67,7 @@
                             <option value="{{$currency->id}}">{{$currency->name}} ({{$currency->code}})</option>
                         @endforeach
                     </select>
-                    <label for="currency_id">Select currency:</label>
+                    <label for="currency_id">{{ __('messages.select-currency') }}:</label>
                 </div>
             </div>
             <div class="row">

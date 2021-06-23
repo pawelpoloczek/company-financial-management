@@ -21,4 +21,6 @@ return [
     'tax-value' => 'Wartość podatku',
     'submit' => 'Zapisz',
     'description' => 'Opis',
+    'select-tax-rate' => 'Wybierz stawkę podatku',
+    'select-currency' => 'Wybierz walutę',
 ];
