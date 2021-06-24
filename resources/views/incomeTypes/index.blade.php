@@ -16,7 +16,7 @@
 
     <div class="col s12 mt-2">
         <a class="light-blue darken-1 btn " href="{{route('incomeTypes.create')}}">
-            <i class="material-icons left">add</i>Add income type
+            <i class="material-icons left">add</i>{{ __('messages.add') }}
         </a>
     </div>
 

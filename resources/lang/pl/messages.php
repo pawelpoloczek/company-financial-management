@@ -29,5 +29,7 @@ return [
     'select-income-type' => 'Wybierz typ przychodu',
     'incomes' => 'Przychody',
     'edit' => 'Edytuj',
+    'add' => 'Dodaj',
     'delete' => 'Usuń',
+    'currencies' => 'Waluty',
 ];

@@ -9,7 +9,7 @@
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
                     <a href="{{route('incomeTypes.index')}}" class="breadcrumb">Income types</a>
-                    <a href="#" class="breadcrumb">Add new income type</a>
+                    <a href="#" class="breadcrumb">{{ __('messages.add') }}</a>
                 </div>
             </div>
         </nav>

@@ -37,7 +37,7 @@
             <li><a href="{{route('incomes.index')}}">{{ __('messages.incomes') }}</a></li>
             <li><a href="{{route('expenseTypes.index')}}">Expense types</a></li>
             <li><a href="{{route('incomeTypes.index')}}">Income types</a></li>
-            <li><a href="{{route('currencies.index')}}">Currencies</a></li>
+            <li><a href="{{route('currencies.index')}}">{{ __('messages.currencies') }}</a></li>
             <li><a href="{{route('taxRates.index')}}">Tax rates</a></li>
         </ul>
 

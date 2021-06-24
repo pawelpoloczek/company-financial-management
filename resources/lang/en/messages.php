@@ -29,5 +29,7 @@ return [
     'select-income-type' => 'Select income type',
     'incomes' => 'Incomes',
     'edit' => 'Edit',
+    'add' => 'Add',
     'delete' => 'Delete',
+    'currencies' => 'Currencies',
 ];

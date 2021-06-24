@@ -16,7 +16,7 @@
 
     <div class="col s12 mt-2    ">
         <a class="light-blue darken-1 btn " href="{{route('expenses.create')}}">
-            <i class="material-icons left">add</i>Add expense
+            <i class="material-icons left">add</i>{{ __('messages.add') }}
         </a>
     </div>
 

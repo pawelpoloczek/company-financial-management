@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Currencies')
+@section('title', __('messages.currencies'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('currencies.index')}}" class="breadcrumb">Currencies</a>
+                    <a href="{{route('currencies.index')}}" class="breadcrumb">{{ __('messages.currencies') }}</a>
                 </div>
             </div>
         </nav>
@@ -16,7 +16,7 @@
 
     <div class="col s12 mt-2">
         <a class="light-blue darken-1 btn " href="{{route('currencies.create')}}">
-            <i class="material-icons left">add</i>Add currency
+            <i class="material-icons left">add</i>{{ __('messages.add') }}
         </a>
     </div>
 
