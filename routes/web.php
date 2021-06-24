@@ -9,7 +9,7 @@ Route::middleware(['auth:sanctum', 'verified'])
     ->get('/', DashboardController::class)
     ->name('dashboard');
 
-Route::get('/user/profile', function() {
+Route::get('/user/profile', function () {
     return redirect('/profile');
 });
 

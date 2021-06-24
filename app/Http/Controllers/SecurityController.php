@@ -46,7 +46,7 @@ final class SecurityController extends Controller
         $user = User::find($loggedUser->id);
 
         $requestData = $request->all();
-        if (!Hash::check($requestData['current_password'], $user->password)) {
+        if (! Hash::check($requestData['current_password'], $user->password)) {
             return redirect()
                 ->route('profile')
                 ->with('error', 'Current password is wrong.');

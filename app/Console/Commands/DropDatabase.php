@@ -15,7 +15,7 @@ final class DropDatabase extends Command
     public function handle(): void
     {
         $schema = $this->argument('name') ?: config('database.connections.mysql.database');
-        $query = "DROP DATABASE IF EXISTS $schema;";
+        $query = "DROP DATABASE IF EXISTS ${schema};";
 
         DB::statement($query);
 

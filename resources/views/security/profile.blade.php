@@ -17,11 +17,8 @@
     <div class="col s12">
         <ul class="collection">
             <li class="collection-item">
-{{--            <li class="collection-item avatar">--}}
-{{--                <img src="" alt="" class="circle">--}}
                 <span class="title">{{ __('messages.username') }}: {{ $user->name }}</span>
                 <p>{{ __('messages.email') }}: {{ $user->email }} <br></p>
-{{--                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>--}}
             </li>
         </ul>
     </div>

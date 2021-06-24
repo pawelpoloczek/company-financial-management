@@ -20,7 +20,7 @@ final class CreateDatabase extends Command
 
         config(['database.connections.mysql.database' => null]);
 
-        $query = "CREATE DATABASE IF NOT EXISTS $schema CHARACTER SET $charset COLLATE $collation;";
+        $query = "CREATE DATABASE IF NOT EXISTS ${schema} CHARACTER SET ${charset} COLLATE ${collation};";
 
         DB::statement($query);
 
