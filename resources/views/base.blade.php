@@ -20,12 +20,12 @@
                         </li>
                         <li>
                             <a class="nav-item" href="{{route('profile')}}">
-                                <i class="material-icons">person</i>Profile
+                                <i class="material-icons">person</i>{{ __('messages.profile') }}
                             </a>
                         </li>
                         <li>
                             <a class="nav-item" href="{{route('logout')}}">
-                                <i class="material-icons">exit_to_app</i>Logout
+                                <i class="material-icons">exit_to_app</i>{{ __('messages.logout') }}
                             </a>
                         </li>
                     </ul>

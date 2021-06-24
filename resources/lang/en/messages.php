@@ -38,4 +38,8 @@ return [
     'value' => 'Value',
     'code' => 'Code',
     'symbol' => 'Symbol',
+    'profile' => 'Profile',
+    'logout' => 'Logout',
+    'current-password' => 'Current password',
+    'new-password' => 'New password',
 ];

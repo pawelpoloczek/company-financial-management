@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="#" class="breadcrumb">Profile</a>
+                    <a href="#" class="breadcrumb">{{ __('messages.profile') }}</a>
                 </div>
             </div>
         </nav>
@@ -19,8 +19,8 @@
             <li class="collection-item">
 {{--            <li class="collection-item avatar">--}}
 {{--                <img src="" alt="" class="circle">--}}
-                <span class="title">Username: {{ $user->name }}</span>
-                <p>Email: {{ $user->email }} <br></p>
+                <span class="title">{{ __('messages.username') }}: {{ $user->name }}</span>
+                <p>{{ __('messages.email') }}: {{ $user->email }} <br></p>
 {{--                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>--}}
             </li>
         </ul>
@@ -31,16 +31,16 @@
             @csrf
             <div class="row">
                 <div class="input-field col s12 m4">
-                    <input placeholder="Current password" id="current_password" name="current_password" type="password" class="validate" />
-                    <label for="current_password">Current password</label>
+                    <input placeholder="{{ __('messages.current-password') }}" id="current_password" name="current_password" type="password" class="validate" />
+                    <label for="current_password">{{ __('messages.current-password') }}</label>
                 </div>
                 <div class="input-field col s12 m4">
-                    <input placeholder="New password" id="new_password" name="new_password" type="password" class="validate" />
-                    <label for="new_password">New password</label>
+                    <input placeholder="{{ __('messages.new-password') }}" id="new_password" name="new_password" type="password" class="validate" />
+                    <label for="new_password">{{ __('messages.new-password') }}</label>
                 </div>
                 <div class="input-field col s12 m4">
-                    <input placeholder="Confirm password" id="confirm_password" name="confirm_password" type="password" class="validate" />
-                    <label for="confirm_password">Confirm password</label>
+                    <input placeholder="{{ __('messages.confirm-password') }}" id="confirm_password" name="confirm_password" type="password" class="validate" />
+                    <label for="confirm_password">{{ __('messages.confirm-password') }}</label>
                 </div>
             </div>
             <div class="row">
