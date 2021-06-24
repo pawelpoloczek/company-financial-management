@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', __('messages.tax-rate'))
+@section('title', __('messages.tax-rates'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('taxRates.index')}}" class="breadcrumb">Tax rates</a>
+                    <a href="{{route('taxRates.index')}}" class="breadcrumb">{{ __('messages.tax-rates') }}</a>
                     <a href="#" class="breadcrumb">{{ __('messages.edit') }}</a>
                 </div>
             </div>
@@ -25,8 +25,8 @@
                     <label for="name">{{ __('messages.name') }}</label>
                 </div>
                 <div class="input-field col s6">
-                    <input value="{{ $taxRate->value }}" placeholder="Value" id="value" name="value" type="number" step="0.01" class="validate" />
-                    <label for="value">Value</label>
+                    <input value="{{ $taxRate->value }}" placeholder="{{ __('messages.value') }}" id="value" name="value" type="number" step="0.01" class="validate" />
+                    <label for="value">{{ __('messages.value') }}</label>
                 </div>
             </div>
             <div class="row">

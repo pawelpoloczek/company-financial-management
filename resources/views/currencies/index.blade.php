@@ -24,8 +24,8 @@
         <table>
             <tr>
                 <th>{{ __('messages.name') }}</th>
-                <th>Code</th>
-                <th>Symbol</th>
+                <th>{{ __('messages.code') }}</th>
+                <th>{{ __('messages.symbol') }}</th>
                 <th class="right-align pr30">{{ __('messages.actions') }}</th>
             </tr>
             @foreach ($currencies as $currency)

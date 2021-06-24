@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', __('messages.tax-rate'))
+@section('title', __('messages.tax-rates'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('taxRates.index')}}" class="breadcrumb">Tax rates</a>
+                    <a href="{{route('taxRates.index')}}" class="breadcrumb">{{ __('messages.tax-rates') }}</a>
                 </div>
             </div>
         </nav>
@@ -24,7 +24,7 @@
         <table>
             <tr>
                 <th>{{ __('messages.name') }}</th>
-                <th>Value</th>
+                <th>{{ __('messages.value') }}</th>
                 <th class="right-align pr30">{{ __('messages.actions') }}</th>
             </tr>
             @foreach ($taxRates as $taxRate)

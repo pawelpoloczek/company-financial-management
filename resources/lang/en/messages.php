@@ -32,4 +32,10 @@ return [
     'add' => 'Add',
     'delete' => 'Delete',
     'currencies' => 'Currencies',
+    'expense-types' => 'Expense types',
+    'income-types' => 'Income types',
+    'tax-rates' => 'Tax rates',
+    'value' => 'Value',
+    'code' => 'Code',
+    'symbol' => 'Symbol',
 ];

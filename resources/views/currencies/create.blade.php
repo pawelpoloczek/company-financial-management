@@ -24,12 +24,12 @@
                     <label for="name">{{ __('messages.name') }}</label>
                 </div>
                 <div class="input-field col s3">
-                    <input placeholder="Code" id="code" name="code" type="text" class="validate" />
-                    <label for="code">Code</label>
+                    <input placeholder="{{ __('messages.code') }}" id="code" name="code" type="text" class="validate" />
+                    <label for="code">{{ __('messages.code') }}</label>
                 </div>
                 <div class="input-field col s3">
-                    <input placeholder="Symbol" id="symbol" name="symbol" type="text" class="validate" />
-                    <label for="name">Symbol</label>
+                    <input placeholder="{{ __('messages.symbol') }}" id="symbol" name="symbol" type="text" class="validate" />
+                    <label for="name">{{ __('messages.symbol') }}</label>
                 </div>
             </div>
             <div class="row">

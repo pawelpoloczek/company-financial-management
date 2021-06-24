@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Expense type edit')
+@section('title', __('messages.expense-types'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('expenseTypes.index')}}" class="breadcrumb">Expense types</a>
+                    <a href="{{route('expenseTypes.index')}}" class="breadcrumb">{{ __('messages.expense-types') }}</a>
                     <a href="#" class="breadcrumb">{{ __('messages.edit') }}</a>
                 </div>
             </div>

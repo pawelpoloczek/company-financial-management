@@ -32,4 +32,10 @@ return [
     'add' => 'Dodaj',
     'delete' => 'Usuń',
     'currencies' => 'Waluty',
+    'expense-types' => 'Typy wydatków',
+    'income-types' => 'Typy dochodów',
+    'tax-rates' => 'Stawki podatku',
+    'value' => 'Wartość',
+    'code' => 'Kod',
+    'symbol' => 'Symbol',
 ];

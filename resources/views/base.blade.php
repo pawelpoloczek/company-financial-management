@@ -35,10 +35,10 @@
         <ul class="sidenav sidenav-fixed">
             <li><a href="{{route('expenses.index')}}">{{ __('messages.expenses') }}</a></li>
             <li><a href="{{route('incomes.index')}}">{{ __('messages.incomes') }}</a></li>
-            <li><a href="{{route('expenseTypes.index')}}">Expense types</a></li>
-            <li><a href="{{route('incomeTypes.index')}}">Income types</a></li>
+            <li><a href="{{route('expenseTypes.index')}}">{{ __('messages.expense-types') }}</a></li>
+            <li><a href="{{route('incomeTypes.index')}}">{{ __('messages.income-types') }}</a></li>
             <li><a href="{{route('currencies.index')}}">{{ __('messages.currencies') }}</a></li>
-            <li><a href="{{route('taxRates.index')}}">Tax rates</a></li>
+            <li><a href="{{route('taxRates.index')}}">{{ __('messages.tax-rates') }}</a></li>
         </ul>
 
         <main>

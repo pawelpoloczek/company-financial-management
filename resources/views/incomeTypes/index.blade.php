@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'Income types')
+@section('title', __('messages.income-types'))
 
 @section('content')
     <div class="col s12">
@@ -8,7 +8,7 @@
             <div class="nav-wrapper light-blue darken-1">
                 <div class="col s12">
                     <a href="{{route('dashboard')}}" class="breadcrumb">{{ __('messages.dashboard') }}</a>
-                    <a href="{{route('incomeTypes.index')}}" class="breadcrumb">Income types</a>
+                    <a href="{{route('incomeTypes.index')}}" class="breadcrumb">{{ __('messages.income-types') }}</a>
                 </div>
             </div>
         </nav>
