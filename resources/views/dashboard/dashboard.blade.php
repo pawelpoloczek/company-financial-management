@@ -14,6 +14,6 @@
     </div>
 
     <div class="col s12">
-        <p>Dashboard</p>
+        {{--   todo wykresy wydatków i przychodów oraz ostatnio zalogowani użytkownicy     --}}
     </div>
 @endsection

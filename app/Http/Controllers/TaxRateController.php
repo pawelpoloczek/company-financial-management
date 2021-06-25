@@ -34,7 +34,10 @@ final class TaxRateController extends Controller
 
         return redirect()
             ->route('taxRates.index')
-            ->with('success', 'Tax rate created successfully.');
+            ->with(
+                'success',
+                trans('messages.element-created-successfully')
+            );
     }
 
     public function edit(TaxRate $taxRate): View
@@ -53,7 +56,10 @@ final class TaxRateController extends Controller
 
         return redirect()
             ->route('taxRates.index')
-            ->with('success', 'Tax rate updated successfully.');
+            ->with(
+                'success',
+                trans('messages.element-updated-successfully')
+            );
     }
 
     public function destroy(TaxRate $taxRate): RedirectResponse
@@ -62,6 +68,9 @@ final class TaxRateController extends Controller
 
         return redirect()
             ->route('taxRates.index')
-            ->with('success', 'Tax rate deleted successfully.');
+            ->with(
+                'success',
+                trans('messages.element-deleted-successfully')
+            );
     }
 }

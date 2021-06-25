@@ -42,4 +42,7 @@ return [
     'logout' => 'Logout',
     'current-password' => 'Current password',
     'new-password' => 'New password',
+    'element-created-successfully' => 'Element created successfully',
+    'element-updated-successfully' => 'Element updated successfully',
+    'element-deleted-successfully' => 'Element deleted successfully',
 ];

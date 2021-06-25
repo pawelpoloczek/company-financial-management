@@ -50,7 +50,10 @@ final class IncomeController extends Controller
 
         return redirect()
             ->route('incomes.index')
-            ->with('success', 'Income created successfully.');
+            ->with(
+                'success',
+                trans('messages.element-created-successfully')
+            );
     }
 
     public function edit(Income $income): View
@@ -82,7 +85,10 @@ final class IncomeController extends Controller
 
         return redirect()
             ->route('incomes.index')
-            ->with('success', 'Income updated successfully.');
+            ->with(
+                'success',
+                trans('messages.element-updated-successfully')
+            );
     }
 
     public function destroy(Income $income): RedirectResponse
@@ -91,6 +97,9 @@ final class IncomeController extends Controller
 
         return redirect()
             ->route('incomes.index')
-            ->with('success', 'Income deleted successfully.');
+            ->with(
+                'success',
+                trans('messages.element-deleted-successfully')
+            );
     }
 }

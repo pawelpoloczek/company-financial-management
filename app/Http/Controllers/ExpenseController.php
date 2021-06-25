@@ -50,7 +50,10 @@ final class ExpenseController extends Controller
 
         return redirect()
             ->route('expenses.index')
-            ->with('success', 'Expense created successfully.');
+            ->with(
+                'success',
+                trans('messages.element-created-successfully')
+            );
     }
 
     public function edit(Expense $expense): View
@@ -82,7 +85,10 @@ final class ExpenseController extends Controller
 
         return redirect()
             ->route('expenses.index')
-            ->with('success', 'Expense updated successfully.');
+            ->with(
+                'success',
+                trans('messages.element-updated-successfully')
+            );
     }
 
     public function destroy(Expense $expense): RedirectResponse
@@ -91,6 +97,9 @@ final class ExpenseController extends Controller
 
         return redirect()
             ->route('expenses.index')
-            ->with('success', 'Expense deleted successfully.');
+            ->with(
+                'success',
+                trans('messages.element-deleted-successfully')
+            );
     }
 }
