@@ -2,9 +2,12 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\SecurityController;
 use App\Http\Middleware\Localization;
 use Illuminate\Support\Facades\Route;
+
+Route::post('/set-locale', [LocaleController::class, 'setLocale'])->name('set-locale');
 
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/', DashboardController::class)

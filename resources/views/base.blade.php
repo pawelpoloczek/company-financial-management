@@ -24,6 +24,19 @@
                             </a>
                         </li>
                         <li>
+                            <form class="locale-form" action="{{ route('set-locale') }}" method="POST">
+                                @csrf
+                                <select name="locale" onchange="this.form.submit()">
+                                    <option
+                                        @if (session()->get('locale') === 'en')selected="selected" @endif
+                                        value="en">EN</option>
+                                    <option
+                                        @if (session()->get('locale') === 'pl')selected="selected" @endif
+                                        value="pl">PL</option>
+                                </select>
+                            </form>
+                        </li>
+                        <li>
                             <a class="nav-item" href="{{route('logout')}}">
                                 <i class="material-icons">exit_to_app</i>{{ __('messages.logout') }}
                             </a>
