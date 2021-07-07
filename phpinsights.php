@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use ObjectCalisthenics\Sniffs\Files\ClassTraitAndInterfaceLengthSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 
 return [
@@ -14,9 +13,6 @@ return [
     'add' => [],
     'remove' => [],
     'config' => [
-        ClassTraitAndInterfaceLengthSniff::class => [
-            'maxLength' => 300,
-        ],
         LineLengthSniff::class => [
             'lineLimit' => 120,
             'absoluteLineLimit' => 130,
