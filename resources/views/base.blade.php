@@ -63,12 +63,16 @@
                 </div>
             @endif
             @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="red padding">
+                            <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             @endif
             <div class="row">
