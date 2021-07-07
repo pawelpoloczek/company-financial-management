@@ -8,6 +8,21 @@
     <body>
         <main>
             <div class="row" style="margin-top: 150px;">
+                @if ($errors->any())
+                    <div class="row">
+                        <div class="col s0 m4"></div>
+                        <div class="col s12 m4">
+                            <div class="red white-text z-depth-5" style="padding: 5px 10px">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col s0 m4"></div>
+                    </div>
+                @endif
                 <div class="col s0 m4"></div>
                 <div class="col s12 m4">
                     <form action="{{ route('login') }}" method="POST" class="z-depth-5" style="padding: 30px 30px 10px 30px">
