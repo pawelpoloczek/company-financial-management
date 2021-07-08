@@ -24,7 +24,7 @@
                             </a>
                         </li>
                         <li>
-                            <form class="locale-form" action="{{ route('set-locale') }}" method="POST">
+                            <form class="locale-form" action="{{ route('change-locale') }}" method="POST">
                                 @csrf
                                 <select name="locale" onchange="this.form.submit()">
                                     <option
@@ -65,7 +65,7 @@
             @if ($errors->any())
                 <div class="row">
                     <div class="col s12">
-                        <div class="red padding">
+                        <div class="red white-text padding">
                             <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>

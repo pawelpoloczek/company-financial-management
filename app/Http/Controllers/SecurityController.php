@@ -47,22 +47,16 @@ final class SecurityController extends Controller
 
         $requestData = $request->all();
         if (! Hash::check($requestData['current_password'], $user->password)) {
-            return redirect()
-                ->route('profile')
-                ->with('error', 'Current password is wrong.');
+            return redirect()->route('profile')->with('error', 'Current password is wrong.');
         }
 
         if ($requestData['new_password'] !== $requestData['confirm_password']) {
-            return redirect()
-                ->route('profile')
-                ->with('error', 'Password confirmation is wrong.');
+            return redirect()->route('profile')->with('error', 'Password confirmation is wrong.');
         }
 
         $user->password = Hash::make($requestData['new_password']);
         $user->save();
 
-        return redirect()
-            ->route('profile')
-            ->with('success', 'Password updated successfully.');
+        return redirect()->route('profile')->with('success', 'Password updated successfully.');
     }
 }

@@ -17,7 +17,7 @@ final class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards): Response
     {
-        $guards = ($guards === '' || $guards === null) ? [null] : $guards;
+        $guards = $guards === '' || $guards === null ? [null] : $guards;
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {

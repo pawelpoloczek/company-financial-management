@@ -30,19 +30,18 @@
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="{{ __('messages.net') }}" id="net" name="net" type="number" step="0.0001" class="validate" />
-                    <label for="net">{{ __('messages.net') }}</label>
+                    <input placeholder="{{ __('messages.value') }}" id="value" name="value" type="number" step="0.0001" class="validate" />
+                    <label for="value">{{ __('messages.value') }}</label>
                 </div>
                 <div class="input-field col s6">
-                    <input placeholder="{{ __('messages.gross') }}" id="gross" name="gross" type="number" step="0.0001" class="validate" />
-                    <label for="gross">{{ __('messages.gross') }}</label>
+                    <select name="value_type" id="value_type">
+                        <option value="0">{{ __('messages.net') }}</option>
+                        <option value="1">{{ __('messages.gross') }}</option>
+                    </select>
+                    <label for="value_type">{{ __('messages.value-type') }}:</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s6">
-                    <input placeholder="{{ __('messages.tax-value') }}" id="tax" name="tax" type="number" step="0.0001" class="validate" />
-                    <label for="tax">{{ __('messages.tax-value') }}</label>
-                </div>
                 <div class="input-field col s6">
                     <select name="tax_rate_id" id="tax_rate_id">
                         @foreach ($taxRates as $taxRate)
@@ -51,8 +50,6 @@
                     </select>
                     <label for="tax_rate_id">{{ __('messages.select-tax-rate') }}:</label>
                 </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s6">
                     <select name="income_type_id" id="income_type_id">
                         @foreach ($incomeTypes as $incomeType)
@@ -61,6 +58,8 @@
                     </select>
                     <label for="income_type_id">{{ __('messages.select-income-type') }}:</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s6">
                     <select name="currency_id" id="currency_id">
                         @foreach ($currencies as $currency)
@@ -69,8 +68,6 @@
                     </select>
                     <label for="currency_id">{{ __('messages.select-currency') }}:</label>
                 </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s6">
                     <textarea id="description" name="description" class="materialize-textarea"></textarea>
                     <label for="description">{{ __('messages.description') }}</label>

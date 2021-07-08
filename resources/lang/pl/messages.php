@@ -42,6 +42,7 @@ return [
     'logout' => 'Wyloguj się',
     'current-password' => 'Aktualne hasło',
     'new-password' => 'Nowe hasło',
+    'value-type' => 'Typ wartości',
     'element-created-successfully' => 'Element dodany pomyślnie',
     'element-updated-successfully' => 'Element zaktualizowany pomyślnie',
     'element-deleted-successfully' => 'Element usunięty pomyślnie',
