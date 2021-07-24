@@ -8,6 +8,7 @@ use App\Models\Currency;
 use App\Models\Expense;
 use App\Models\ExpenseType;
 use App\Models\TaxRate;
+use App\Services\FormDataCalculator;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -38,15 +39,17 @@ final class ExpenseController extends Controller
         $request->validate([
             'name' => 'required',
             'date' => 'required',
-            'net' => 'required',
-            'gross' => 'required',
-            'tax' => 'required',
+            'value' => 'required',
+            'value_type' => 'required',
             'tax_rate_id' => 'required',
             'expense_type_id' => 'required',
             'currency_id' => 'required',
         ]);
 
-        Expense::create($request->all());
+        $formDataCalculator = new FormDataCalculator();
+        Expense::create(
+            $formDataCalculator->calculate($request->all())
+        );
 
         return redirect()
             ->route('expenses.index')
